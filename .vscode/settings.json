@@ -1,0 +1,14 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript], [javascriptreact], [typescript], [typescriptreact], [json], [jsonc], [html], [css]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "typescript.tsdkPath": "node_modules/typescript/lib",
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "emmet.showExpandedAbbreviation": "never",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "explicit"
+  }
+}
