@@ -5,7 +5,7 @@ import {
   validatorCompiler,
   type ZodTypeProvider,
 } from "fastify-type-provider-zod";
-import { env } from "./env/env.ts";
+import { env } from "./env.ts";
 
 const app = fastify()
   .withTypeProvider<ZodTypeProvider>()
@@ -19,5 +19,6 @@ app.setValidatorCompiler(validatorCompiler);
 
 app;
 app.listen({ port: env.PORT }).then(() => {
+  // biome-ignore lint/suspicious/noConsole: used for warning startup
   console.log("Server is running!");
 });
