@@ -1,12 +1,10 @@
-import "dotenv/config"; 
+import "dotenv/config";
 import { z } from "zod";
 
-export const envSchema = z.object({
+const envSchema = z.object({
   PORT: z.coerce.number().default(3000),
   DATABASE_URL: z.string().url().startsWith("postgresql://"),
+  GEMINI_API_KEY: z.string(),
 });
 
-export const env = envSchema.parse({
-  PORT: process.env.PORT,
-  DATABASE_URL: process.env.DATABASE_URL,
-});
+export const env = envSchema.parse(process.env);

@@ -30,18 +30,17 @@ Content-Type: application/json
 
 # Create a new question in a room
 # @name createQuestionRoute
-POST {{baseUrl}}/rooms/{{roomId}}/questions
+POST {{baseUrl}}/rooms/014d9e79-5609-4a51-aee9-aeedf258cb80/questions
 Content-Type: application/json
 
 {
-  "question": "What is the meaning of life?"
+  "question": "O que é Vue?"
 }
 
 ###
 
 # Get room questions
 # @name getRoomQuestions
-GET {{baseUrl}}/rooms/{{roomId}}/questions
-
+GET {{baseUrl}}/rooms/014d9e79-5609-4a51-aee9-aeedf258cb80/questions
 
 ###
